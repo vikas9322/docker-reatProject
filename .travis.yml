@@ -1,9 +1,8 @@
 sudo : reqquired
 services :
   - docker
-
 before_install:
   - docker build -t vikas/reactproject -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true vikas/reactproject npm run test
+  - docker run vikas/reactproject npm run test -- --coverage
