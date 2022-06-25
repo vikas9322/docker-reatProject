@@ -7,5 +7,3 @@ before_install:
 
 script:
   - docker run -e CI=true vikas/reactproject npm run test
-
-language: generic 
